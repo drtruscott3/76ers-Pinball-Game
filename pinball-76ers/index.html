@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>76ers Pinball Arcade</title>
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+  <div class="page-shell">
+    <header class="hero">
+      <div>
+        <img src="https://upload.wikimedia.org/wikipedia/en/6/63/Philadelphia_76ers_logo.svg" alt="76ers logo" class="logo" />
+        <h1>76ers Pinball Arcade</h1>
+      </div>
+      <div class="controls-info">
+        <p>Move Paddle Left: <strong>ArrowLeft</strong></p>
+        <p>Move Paddle Right: <strong>ArrowRight</strong></p>
+        <p>Launch Ball: <strong>Space</strong> (hold for power)</p>
+      </div>
+    </header>
+
+    <main class="layout-grid">
+      <section class="game-panel">
+        <div class="game-status">
+          <div><label for="playerName">Player</label><input id="playerName" placeholder="Enter name" maxlength="12" value="Sixer" /></div>
+          <div class="status-row"><span>Score</span><strong id="scoreDisplay">0</strong></div>
+          <div class="status-row"><span>Balls</span><strong id="ballsDisplay">3</strong></div>
+          <div class="status-row"><span>Launch Power</span><strong id="launchPower">0%</strong></div>
+          <div class="button-row">
+            <button id="startButton">Start New Game</button>
+            <button id="resetButton">Reset Game</button>
+            <button id="fullscreenButton">Enter Fullscreen</button>
+          </div>
+        </div>
+
+        <div class="canvas-wrap">
+          <canvas id="pinballCanvas" width="600" height="900" aria-label="76ers pinball machine"></canvas>
+        </div>
+      </section>
+
+      <aside class="leaderboard-panel">
+        <div class="scoreboard-card">
+          <h2>Leaderboard</h2>
+          <ol id="leaderboardList"></ol>
+        </div>
+        <div class="theme-card">
+          <h2>76ers Theme</h2>
+          <p>Hit bumpers, ramps, and targets to keep the ball alive and climb the top 10.</p>
+          <p>Every ball counts. You get 3 tries before the game ends.</p>
+        </div>
+      </aside>
+    </main>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>
